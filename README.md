@@ -43,3 +43,18 @@ Add starter code to
 
 Update scripts on
 - package.json
+
+---
+
+## Additional items
+
+dotenv (if using env variables)
+- `npm install dotenv-webpack --save-dev`
+- in webpack.config.js add the following
+- - top of file: `const Dotenv = require("dotenv-webpack");`
+- - within module.exports, plugins: []: `new Dotenv({systemvars: true,}),`
+- create a .env file
+- add .env to gitignore
+- add env items as `NAME_OF_THING="the thing"`
+- use env items as `process.env.NAME_OF_THING`
+- make sure eslint has `"node": true,` within 'env' section or you will get linting errors when you use `process`
