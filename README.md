@@ -22,7 +22,7 @@ webpack dev server
 - `npm i --save-dev webpack-dev-server`
 
 babel
-- `npm i @babel/core @babel/preset-env babel-loader --save-dev`
+- `npm i @babel/core @babel/preset-env @babel/preset-react babel-loader --save-dev`
 - `touch .babelrc`
 
 react
