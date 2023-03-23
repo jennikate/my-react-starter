@@ -11,6 +11,8 @@ webpack
 
 plugins
 - `npm i html-webpack-plugin --save-dev`
+- `npm i copy-webpack-plugin --save-dev`
+- `npm i mini-css-extract-plugin --save-dev`
 
 loaders
 - `npm i style-loader --save-dev`
@@ -30,8 +32,7 @@ react
 - `npm i @babel/preset-react --save-dev`
 
 eslint
-- `npm i eslint-plugin-react@latest eslint@latest eslint-plugin-jsx-a11y --save-dev`
-- `touch .eslintrc.json`
+- `npm init @eslint/config`
 
 Add starter code to
 - index.html
