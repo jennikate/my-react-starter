@@ -1,13 +1,17 @@
 {
   "env": {
       "browser": true,
-      "es2021": true
+      "es2021": true,
+      "node": true,
+      "jest/globals": true
   },
   "extends": [
       "eslint:recommended",
+      "airbnb", "airbnb/hooks",
       "plugin:react/recommended",
       "plugin:react/jsx-runtime",
-      "plugin:jsx-a11y/recommended"
+      "plugin:jsx-a11y/recommended",
+      "plugin:jest/recommended"
   ],
   "parserOptions": {
       "ecmaFeatures": {
@@ -17,12 +21,21 @@
       "sourceType": "module"
   },
   "plugins": [
-      "react"
+      "react",
+      "babel",
+      "jest"
   ],
   "rules": {
-      "quotes": [ "error",  "single"],
-      "semi": ["error", "always"],
-      "no-console": ["warn"],
-      "comma-dangle": ["error", "always-multiline"]
-  }
+    "eol-last": ["error", "always"],
+    "jsx-a11y/label-has-associated-control": ["error", { "assert": "either" } ],
+    "max-len": ["error", { "code": 250, "ignoreStrings": true, "ignoreComments": true, "ignorePattern": "^path " }],
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.spec.js",
+        "*.spec.jsx"
+      ]
+    }
+  ]
 }
