@@ -55,6 +55,7 @@ module.exports = (argv) => {
       new HtmlWebpackPlugin({
         template: path.join(__dirname, 'public', 'index.html'),
         favicon: './src/assets/images/favicon.ico',
+        // gaTokenValue: env.GA_TOKEN, // example use of env var needed in index.html
       }),
       new CopyPlugin(
         {
@@ -66,8 +67,9 @@ module.exports = (argv) => {
         },
       ),
       // This allows to pass env vars on runtime, see /nginx/run.sh and Dockerfile
+      // it's probably not the best way to do this but it's how we're doing it in current projects
       new webpack.EnvironmentPlugin([
-        'API_BASE_URL',
+        'API_BASE_URL', // example use of env var used in React App only
       ]),
     ].concat(devMode ? [] : [new MiniCssExtractPlugin({
       filename: '[name]-[hash].css',
