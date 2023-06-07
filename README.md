@@ -1,40 +1,57 @@
 # Setup React app with Webpack and Eslint
+
+## Contents
+
+[Base setup](#base-setup) which includes
+- [react](#react)
+- [react router](#react-router)
+- [webpack](#webpack)
+- [babel](#babel)
+- [eslint](#eslint)
+
+**Optional config items**
+- [Env variables](#env-variables)
+- [Using env variables in index.html](#loading-env-variables-that-can-be-used-in-indexhtml)
+
+
+
+### Base setup
 - `npm init -y`
 - `mkdir public`
 - `touch public/index.html`
 
-webpack
+### react
+- `npm i react react-dom --save`
+
+### react router
+- `npm i react-router-dom --save`
+
+### webpack
 - `npm i webpack webpack-cli --save-dev`
 - `mkdir src`
 - `touch src/index.js`
 - `touch webpack.config.js`
-
+webpack dev server
+- `npm i --save-dev webpack-dev-server`
 plugins
 - `npm i html-webpack-plugin --save-dev`
 - `npm i copy-webpack-plugin --save-dev`
 - `npm i mini-css-extract-plugin --save-dev`
-
 loaders
 - `npm i style-loader --save-dev`
 - `npm i css-loader --save-dev`
 - `npm i sass sass-loader --save-dev`
 - `npm i url-loader --save-dev`
 
-webpack dev server
-- `npm i --save-dev webpack-dev-server`
-
-babel
+### babel
 - `npm i @babel/core @babel/preset-env @babel/preset-react babel-loader --save-dev`
+- `npm i @babel/preset-react --save-dev`
 - `touch .babelrc`
 
-react
-- `npm i react react-dom react-router-dom --save`
-- `npm i @babel/preset-react --save-dev`
-
-eslint
+### eslint
 - `npm init @eslint/config`
 
-Add starter code to
+### starter code
 - index.html
 - index.js
 - App.jsx
@@ -42,12 +59,13 @@ Add starter code to
 - .babelrc
 - .eslintrc.json
 
+### scripts
 Update scripts on
 - package.json
 
 ---
 
-## Additional items
+## Env variables
 
 dotenv (if using env variables)
 - `npm install dotenv-webpack --save-dev`

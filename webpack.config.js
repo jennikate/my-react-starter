@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const webpack = require('webpack');
-const env = require('./exportProcessEnv');
+// const env = require('./exportProcessEnv'); // only if you need to use env var in index.html
 
 module.exports = (argv) => {
   const devMode = argv.mode !== 'production';
